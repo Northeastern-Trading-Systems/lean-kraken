@@ -28,22 +28,20 @@ namespace QuantConnect.Algorithm.CSharp
     /// <meta name="tag" content="trading and orders" />
     public class BasicTemplateAlgorithm : QCAlgorithm, IRegressionAlgorithmDefinition
     {
-        private Symbol _spy = QuantConnect.Symbol.Create("SPY", SecurityType.Equity, Market.USA);
+        private Symbol _avaxbtc = QuantConnect.Symbol.Create("AVAXBTC", SecurityType.Crypto, Market.Kraken);
 
         /// <summary>
         /// Initialise the data and resolution required, as well as the cash and start-end dates for your algorithm. All algorithms must initialized.
         /// </summary>
         public override void Initialize()
         {
-            SetStartDate(2013, 10, 07);  //Set Start Date
-            SetEndDate(2013, 10, 11);    //Set End Date
-            SetCash(100000);             //Set Strategy Cash
+            SetCash("BTC", 1);             //Set Strategy Cash
 
             // Find more symbols here: http://quantconnect.com/data
             // Forex, CFD, Equities Resolutions: Tick, Second, Minute, Hour, Daily.
             // Futures Resolution: Tick, Second, Minute
             // Options Resolution: Minute Only.
-            AddEquity("SPY", Resolution.Minute);
+            AddCrypto("AVAXBTC", Resolution.Minute, Market.Kraken);
 
             // There are other assets with similar methods. See "Selecting Options" etc for more details.
             // AddFuture, AddForex, AddCfd, AddOption
@@ -57,8 +55,8 @@ namespace QuantConnect.Algorithm.CSharp
         {
             if (!Portfolio.Invested)
             {
-                SetHoldings(_spy, 1);
-                Debug("Purchased Stock");
+                SetHoldings(_avaxbtc, 1);
+                Debug("Purchased AVAX");
             }
         }
 
