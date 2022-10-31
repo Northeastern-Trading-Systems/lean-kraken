@@ -1,13 +1,13 @@
 {
   // optional: algorithm class selector
-  "algorithm-type-name": "ParameterizedAlgorithm",
+  "algorithm-type-name": "BasicTemplateAlgorithm",
 
   // optional: Algorithm language selector - options CSharp, Python
-  "algorithm-language": "CSharp",
+  "algorithm-language": "Python",
 
   // optional: Physical DLL location
-  "algorithm-location": "QuantConnect.Algorithm.CSharp.dll",
-
+  "algorithm-location": "../../../Algorithm.Python/BasicTemplateAlgorithm.py",
+  
   "optimizer-close-automatically": true,
 
   // How we manage solutions and make decision to continue or stop

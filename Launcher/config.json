@@ -136,8 +136,8 @@
   "binanceus-websocket-url": "wss://stream.binance.us:9443/ws",
 
   // kraken configuration
-  "kraken-api-secret": "",
-  "kraken-api-key": "",
+  "kraken-api-secret": "nMObIESX4Z4Uy2IMnvbz0P44aKfaQM28m1hG7D1b02TSbPjSoHT+Ur6173jBV3+uRkmv8+RTU3VPsp9r0e3VSg==",
+  "kraken-api-key": "nWN1joK7x01VWIlYDWOQI026N2aNoExiw5lGPirSiuoyOFGdBVIUm9uk",
   "kraken-verification-tier": "Starter", // Starter, Intermediate, Pro
 
   // arteyu configuration
