@@ -1,5 +1,5 @@
-# QC Config Files:
-config.json
+# QC Config Files (will only work if we untrack):
+# config.json
 
 # Ignore Mac DS_Store files
 .DS_Store
@@ -281,3 +281,4 @@ Research/Notebooks
 
 #Docker result files
 Results/
+
