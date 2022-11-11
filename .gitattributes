@@ -3,6 +3,9 @@
 ###############################################################################
 * text=auto
 
+# Configuring git-crypt
+/Launcher/config.json filter=git-crypt diff=git-crypt
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
