@@ -1,5 +1,5 @@
-# API keys
-*.json
+# QC Config Files:
+config.json
 
 # Ignore Mac DS_Store files
 .DS_Store
@@ -44,9 +44,6 @@
 # Include docker launch scripts for Mac/Linux
 !run_docker.sh
 !research/run_docker_notebook.sh
-
-# QC Config Files:
-# config.json
 
 # QC-C-Specific
 *Engine/bin/Debug/cache/data/*.zip
