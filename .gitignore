@@ -1,3 +1,9 @@
+# API keys
+Launcher/config.json
+
+# DS_store 
+*/.DS_Store
+
 # Object files
 *.o
 *.ko
