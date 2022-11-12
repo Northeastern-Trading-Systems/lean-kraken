@@ -128,6 +128,18 @@ A full explanation of the Python installation process can be found in the [Algor
 
 Seamlessly develop locally in your favorite development environment, with full autocomplete and debugging support to quickly and easily identify problems with your strategy. For more information please see the [CLI Home](https://www.quantconnect.com/cli).
 
+## Configuring git-crypt ## 
+
+1. Install git-crypt. On MacOS, you can `brew install git-crypt`
+2. Obtain the git-crypt-key. You can email jianuluke@gmail.com or ask in the NTS Slack.
+3. `git pull`
+4. Verify that there's a line in `.gitattributes` configuring git-crypt (it should be near the top).
+5. Verify that the [files](/Launcher/config.json) specified in `.gitattributes` are actually encrypted.
+4. Run `git-crypt unlock x` where x is the location of your key. 
+5. Verify that the [files](/Launcher/config.json) specified in .gitattributes are unencrypted. 
+
+At this point, you should be able to freely push/pull, and git-crypt will seamlessly encrypt/decrypt files. At some point, we should move to a cleaner system using [gpg](https://gnupg.org/). 
+
 ## Issues and Feature Requests ##
 
 Please submit bugs and feature requests as an issue to the [Lean Repository][5]. Before submitting an issue please read others to ensure it is not a duplicate.
