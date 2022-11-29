@@ -153,6 +153,7 @@ namespace QuantConnect.Queues
                 Type brokerageName = null;
                 try
                 {
+                    Console.WriteLine(liveJob.Brokerage);
                     // import the brokerage data for the configured brokerage
                     var brokerageFactory = Composer.Instance.Single<IBrokerageFactory>(factory => factory.BrokerageType.MatchesTypeName(liveJob.Brokerage));
                     brokerageName = brokerageFactory.BrokerageType;

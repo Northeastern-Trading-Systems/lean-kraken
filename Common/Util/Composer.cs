@@ -140,10 +140,12 @@ namespace QuantConnect.Util
                 {
                     try
                     {
+
                         foreach (var type in
                             Assembly.LoadFrom(file).ExportedTypes.Where(type => !type.IsAbstract && !type.IsInterface && !type.IsEnum))
                         {
                             exportedTypes.Add(type);
+                            //Console.WriteLine(type);
                         }
                     }
                     catch (Exception)

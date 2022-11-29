@@ -37,6 +37,11 @@
     <Compile Include="..\Common\Properties\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Kraken\" />
+    <None Remove="Kraken\Converters\" />
+    <None Remove="Kraken\Models\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -48,5 +53,10 @@
     <ProjectReference Include="..\Compression\QuantConnect.Compression.csproj" />
     <ProjectReference Include="..\Configuration\QuantConnect.Configuration.csproj" />
     <ProjectReference Include="..\Logging\QuantConnect.Logging.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kraken\" />
+    <Folder Include="Kraken\Converters\" />
+    <Folder Include="Kraken\Models\" />
   </ItemGroup>
 </Project>

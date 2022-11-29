@@ -13,8 +13,10 @@
  * limitations under the License.
 */
 
+using System;
 using System.Collections.Generic;
 using QuantConnect.Data;
+
 using QuantConnect.Interfaces;
 
 namespace QuantConnect.Algorithm.CSharp
@@ -28,20 +30,21 @@ namespace QuantConnect.Algorithm.CSharp
     /// <meta name="tag" content="trading and orders" />
     public class BasicTemplateAlgorithm : QCAlgorithm, IRegressionAlgorithmDefinition
     {
-        private Symbol _avaxbtc = QuantConnect.Symbol.Create("AVAXBTC", SecurityType.Crypto, Market.Kraken);
+        private Symbol testbtcusd = QuantConnect.Symbol.Create("BTCUSD", SecurityType.Crypto, Market.Kraken);
 
         /// <summary>
         /// Initialise the data and resolution required, as well as the cash and start-end dates for your algorithm. All algorithms must initialized.
         /// </summary>
         public override void Initialize()
         {
-            SetCash("BTC", 1);             //Set Strategy Cash
+            //SetCash("BTC", 1);             //Set Strategy Cash
+            //System.Console.WriteLine("WE ARE HERE");
 
             // Find more symbols here: http://quantconnect.com/data
             // Forex, CFD, Equities Resolutions: Tick, Second, Minute, Hour, Daily.
             // Futures Resolution: Tick, Second, Minute
             // Options Resolution: Minute Only.
-            AddCrypto("AVAXBTC", Resolution.Minute, Market.Kraken);
+            AddCrypto("BTCUSD", Resolution.Minute, Market.Kraken);
 
             // There are other assets with similar methods. See "Selecting Options" etc for more details.
             // AddFuture, AddForex, AddCfd, AddOption
@@ -55,8 +58,8 @@ namespace QuantConnect.Algorithm.CSharp
         {
             if (!Portfolio.Invested)
             {
-                SetHoldings(_avaxbtc, 1);
-                Debug("Purchased AVAX");
+                MarketOrder(testbtcusd, -.0002);
+                Console.WriteLine("Purchased something!!!!!!!!!!!!!");
             }
         }
 
